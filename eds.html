@@ -111,8 +111,19 @@
             ctx.clearRect(0, 0, FRAME_SIZE, FRAME_SIZE);
 
             ctx.fillStyle = "blue";
+               let randomS;
+                 let randomValue = Math.random();
+                if (randomValue < 0.25) {
+                    randomS = 6;
+                } else if (randomValue < 0.5) {
+                    randomS = 6.4;
+                } else if (randomValue < 0.75) {
+                    randomS = 7.2;
+                } else {
+                    randomS = 8.3;
+                }
 
-            if (s <= 8.3) {
+    if (s <= randomS) {
                 ctx.drawImage(fixedDropletImage, 175, 172, 200, 200);
             } else {
                 ctx.drawImage(newFixedDropletImage, 175, 172, 200, 200);
